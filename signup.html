@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare</title>
+    <link rel="stylesheet" href="sign.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        .validation-feedback {
+            font-size: 0.9em;
+        }
+        .valid {
+            color: green !important;
+        }
+        .invalid {
+            color: red !important;
+        }
+        .valid::before {
+            content: "✔ ";
+            color: green !important;
+        }
+        .invalid::before {
+            content: "✘ ";
+            color: red !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="left-box">
+                <h2>Înregistrare</h2>
+                <form id="signup-form" action="register.php" method="POST" enctype="multipart/form-data">
+                    <div class="textbox">
+                        <input type="text" id="username-signup" name="username" placeholder="Nume utilizator" required>
+                        <span class="icon">&#128100;</span>
+                        <p id="username-feedback" class="validation-feedback invalid">Maxim 10 caractere și fără spații</p>
+                    </div>
+                    <div class="textbox">
+                        <input type="email" id="email-signup" name="email" placeholder="Email" required>
+                        <span class="icon">&#9993;</span>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" id="password-signup" name="password" placeholder="Parolă" required>
+                        <span class="icon">&#128274;</span>
+                        <p id="password-feedback" class="validation-feedback">
+                            <span id="length-check" class="invalid">Minim 8 caractere</span>
+                        </p>
+                    </div>
+                    <div class="textbox">
+                        <input type="file" id="profile-pic" name="profilePic" accept="image/*" required>
+                    </div>
+                    <div class="user-type">
+                        <label>
+                            <input type="radio" name="userType" value="student" required> Student
+                        </label>
+                        <label>
+                            <input type="radio" name="userType" value="professor" required> Profesor
+                        </label>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LekOQQqAAAAAMDksM_8Oj-_T-U-jePaThKZcpgN"></div>
+                    <button type="submit" id="submit-button">Înregistrează-te</button>
+                    <p>Ai deja un cont? <a href="signin.html">Autentificare</a></p>
+                </form>
+            </div>
+            <div class="right-box">
+                <h1>Bine ai venit!</h1>
+                <p>Alătură-te și începe-ți călătoria astăzi!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('username-signup').addEventListener('input', function() {
+            const feedback = document.getElementById('username-feedback');
+            const username = this.value;
+            if (/^\S{1,10}$/.test(username)) {
+                feedback.textContent = 'Nume utilizator valid';
+                feedback.classList.remove('invalid');
+                feedback.classList.add('valid');
+            } else {
+                feedback.textContent = 'Maxim 10 caractere și fără spații';
+                feedback.classList.remove('valid');
+                feedback.classList.add('invalid');
+            }
+        });
+
+        document.getElementById('password-signup').addEventListener('input', function() {
+            const password = this.value;
+            const lengthCheck = document.getElementById('length-check');
+
+            const lengthValid = password.length >= 8;
+
+            lengthCheck.classList.toggle('valid', lengthValid);
+            lengthCheck.classList.toggle('invalid', !lengthValid);
+
+            document.getElementById('submit-button').disabled = !lengthValid;
+        });
+    </script>
+</body>
+</html>
