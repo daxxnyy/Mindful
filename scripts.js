@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showSuccessMessage() {
         const successMessage = document.getElementById('success-message');
-                document.getElementById('feedback-form').reset();
+        document.getElementById('feedback-form').reset();
         successMessage.classList.remove('hidden');
         setTimeout(() => {
             successMessage.classList.add('hidden');
