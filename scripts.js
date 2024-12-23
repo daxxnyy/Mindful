@@ -30,21 +30,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (Object.hasOwn(data, 'errors')) {
                         alert(data["errors"].map(error => error["message"]).join(", "));
                     } else {
-                        alert("Oops! There was a problem submitting your form");
+                        alert("Oops! A aparut o eroare!");
                     }
                 })
             }
         }).catch(error => {
-            alert("Oops! There was a problem submitting your form");
+            alert("Oops! A aparut o eroare!");
         });
     }
 
     function showSuccessMessage() {
         const successMessage = document.getElementById('success-message');
+        document.getElementById('feedback-form').reset();
         successMessage.classList.remove('hidden');
         setTimeout(() => {
             successMessage.classList.add('hidden');
-            document.getElementById('feedback-form').reset();
         }, 3000);
     }
 
