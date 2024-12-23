@@ -108,16 +108,18 @@ footer {
         cursor: pointer; 
 }
 .buton-clase {
-    width: 300px; 
-    height: 190px; 
-    display: inline-block; 
-    margin: 10px; 
-    text-align: center; 
-    vertical-align: middle; 
-    font-size: 2em;
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    background-color: #f9f9f9; 
-    cursor: pointer; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    width: 300px; /* Lățime fixă pentru toate butoanele */
+    height: 100px; /* Înălțime fixă pentru toate butoanele */
+    display: inline-block; /* Se aliniază în linie */
+    margin: 10px; /* Spațiu între butoane */
+    text-align: center; /* Text centrat */
+    vertical-align: middle; /* Aliniere verticală */
+    font-size: 25px; /* Dimensiune uniformă a textului */
+    border: 1px solid #ccc; /* Margine pentru toate */
+    border-radius: 5px; /* Colțuri rotunjite */
+    background-color: #f9f9f9; /* Fundal uniform */
+    cursor: pointer; /* Cursor pointer pentru hover */
+  }
+.buton-clase:hover {
+    background-color: #e0e0e0; /* Fundal schimbat la hover */
+  }
