@@ -94,7 +94,7 @@ footer {
 #h1-01 {
     text-align: center;
 }
-#buton-materii {
+.buton-materii {
         width: 190px; 
         height: 90px; 
         display: inline-block; 

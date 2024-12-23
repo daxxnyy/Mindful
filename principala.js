@@ -40,3 +40,44 @@ function loadContent(sectionId) {
         content.style.transform = 'scale(1)'; 
     }, 500); 
 }
+
+document.getElementById("btn-matematica").onclick = function() {
+    window.location.href = "pagini-materii/matematica.html";
+  };
+  document.getElementById("btn-romana").onclick = function() {
+    window.location.href = "pagini-materii/romana.html";
+  };
+  document.getElementById("btn-engleza").onclick = function() {
+    window.location.href = "pagini-materii/engleza.html";
+  };
+  document.getElementById("btn-germana").onclick = function() {
+    window.location.href = "pagini-materii/germana.html";
+  };
+  document.getElementById("btn-franceza").onclick = function() {
+    window.location.href = "pagini-materii/franceza.html";
+  };
+  document.getElementById("btn-fizica").onclick = function() {
+    window.location.href = "pagini-materii/fizica.html";
+  };
+  document.getElementById("btn-chimie").onclick = function() {
+    window.location.href = "pagini-materii/chimie.html";
+  };
+  document.getElementById("btn-istorie").onclick = function() {
+    window.location.href = "pagini-materii/istorie.html";
+  };
+  document.getElementById("btn-geografie").onclick = function() {
+    window.location.href = "pagini-materii/geografie.html";
+  };
+  document.getElementById("btn-civica").onclick = function() {
+    window.location.href = "pagini-materii/civica.html";
+  };
+  document.getElementById("btn-informatica").onclick = function() {
+    window.location.href ="pagini-materii/informatica.html";
+  };
+  document.getElementById("btn-biologie").onclick = function() {
+    window.location.href = "pagini-materii/biologie.html";
+  };
+
+  
+
+  
