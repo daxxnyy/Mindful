@@ -138,3 +138,62 @@ footer {
 .buton-lectii:hover {
     background-color:#5ffcb3;
 }
+.content-container {
+    display: flex;
+    gap: 20px;
+}
+.green-box {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1;
+    margin: 25px;
+}
+.main-content{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.number-container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.number-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d8d8d8;
+    background-color: #f0f0f0;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.red-container {
+    background-color: #fc3030;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 25px;
+}
+.imagine-container {
+    margin-top: 20px;
+    text-align: center;
+}
+.imagine-container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
